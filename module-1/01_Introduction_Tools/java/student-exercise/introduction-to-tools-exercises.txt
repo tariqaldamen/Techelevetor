@@ -119,13 +119,24 @@ v>
 Did you remember to save "introduction-to-tools-exercise.txt"?
 
 $ git status
-<type or copy-paste the result here>
+<  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   introduction-to-tools-exercises.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")>
 
 $ git add -A
-<type or copy-paste the result here>
+<Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   introduction-to-tools-exercises.txt
+
+>
 
 $ git commit -m "Good stopping point"
-<type or copy-paste the result here>
+<master ab3d080] Good stopping point
+ 1 file changed, 18 insertions(+), 8 deletions(-)>
 
 Note, you do not need to push this commit up to BitBucket at this time. The
 typical Git workflow is to make many small commits to your local repo while
@@ -141,8 +152,8 @@ along, and then at the end.
 ----
 
 $ cd src/main/java/com/techelevator
-$ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+$ <pwd>
+</Users/taldamen/Development/tariqaldamen-java-green-material/module-1/01_Introduction_Tools/java/student-exercise/java-helloworld/src/main/java/com/techelevator>
 
 
 ----
@@ -150,7 +161,7 @@ $ <enter command to display present working directory>
     path?
 ----
 
-<type your answer here>
+<absolute path>
 
 
 ----
@@ -158,8 +169,11 @@ $ <enter command to display present working directory>
     your present working directory.
 ----
 
-$ <enter command to list all files and directories including dot-files and dot-directories>
-<type or copy-paste the result here>
+$ <ls -la>
+<total 8
+drwxr-xr-x  3 taldamen  staff   96 May 13 15:50 .
+drwxr-xr-x  3 taldamen  staff   96 May 13 15:50 ..
+-rwxr-xr-x  1 taldamen  staff  141 May 13 15:50 Helloworld.java>
 
 
 ----
@@ -174,7 +188,11 @@ The "cp" parameters are the name of the source file followed by the name of the
 destination file.
 
 $ <enter command to list all files and directories in order to confirm the creation of the backup file>
-<type or copy-paste the result here>
+<total 16
+drwxr-xr-x  4 taldamen  staff  128 May 13 22:19 .
+drwxr-xr-x  3 taldamen  staff   96 May 13 15:50 ..
+-rwxr-xr-x  1 taldamen  staff  141 May 13 15:50 Helloworld.java
+-rwxr-xr-x  1 taldamen  staff  141 May 13 22:19 Helloworld.java.backup>
 
 
 ----
@@ -188,7 +206,7 @@ The "mv" parameters are the existing name of the file followed by the new name
 of the file.
 
 $ <enter command to list all files and directories in order to confirm the renaming of the file>
-<type or copy-paste the result here>
+<Helloworld.java		Helloworld.java.copy>
 
 
 ----
@@ -200,16 +218,39 @@ $ <enter command to list all files and directories in order to confirm the renam
 ----
 
 $ <enter the Git command to display status>
-<type or copy-paste the result here>
+<On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Helloworld.java.copy
+
+nothing added to commit but untracked files present (use "git add" to track)>
 
 $ <enter the Git command to "stage" all changes>
-<type or copy-paste the result here>
+<Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   Helloworld.java.copy>
 
 $ <enter the Git command to save all "staged" changes>
-<type or copy-paste the result here>
+<[master 5408d04] wechange the file name
+ 1 file changed, 9 insertions(+)
+ create mode 100755 module-1/01_Introduction_Tools/java/student-exercise/java-helloworld/src/main/java/com/techelevator/Helloworld.java.copy>
 
 $ git push origin master
-<type or copy-paste the result here>
+<Counting objects: 19, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (19/19), 1.62 KiB | 551.00 KiB/s, done.
+Total 19 (delta 4), reused 0 (delta 0)
+To https://bitbucket.org/te-cbus-cohort-8/tariqaldamen-java-green-material.git
+   81ef1a9..5408d04  master -> master>
 
 
 ----
@@ -221,7 +262,7 @@ $ rm Helloworld.java.copy
 The "rm" parameter is the name of the file to be deleted.
 
 $ <enter command to list all files and directories in order to confirm the file deletion>
-<type or copy-paste the result here>
+<Helloworld.java>
 
 
 ----
@@ -243,7 +284,7 @@ command line when that seems natural.
 Regardless of the option you chose, check your new location.
 
 $ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+</Users/taldamen/Development/tariqaldamen-java-green-material/module-1/01_Introduction_Tools/java/student-exercise/java-helloworld>
 
 
 ----
@@ -254,7 +295,7 @@ $ <enter command to display present working directory>
 $ mkdir docs
 $ <enter the command to change directory to "docs" using a relative path>
 $ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+</Users/taldamen/Development/tariqaldamen-java-green-material/module-1/01_Introduction_Tools/java/student-exercise/java-helloworld/docs>
 
 ----
 19. Create a new file name "readme.txt" using Visual Studio Code, and add the text
