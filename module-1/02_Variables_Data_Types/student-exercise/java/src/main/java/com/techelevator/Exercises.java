@@ -279,93 +279,143 @@ System.out.println("people are on boats in the lake "+(boots*3));
         35. Ellen had 380 legos, but she lost 57 of them. How many legos does she
         have now?
         */
-
+int legos=380;
+int lost=57;
+int total4=legos-lost;
+System.out.println("legos she have"+total4);
         /*
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
         bake to have 83 muffins?
         */
-
+int muffins=35;
+int bake=83;
+int need=bake-muffins;
+System.out.println("to have 83 muffins "+need);
         /*
         37. Willy has 1400 crayons. Lucy has 290 crayons. How many more
         crayons does Willy have then Lucy?
         */
-
+int crayons=1400;
+int crayons1=290;
+int crayons_total=crayons-crayons1;
+System.out.println("more crayons Willy have then Lucy "+crayons_total);
         /*
         38. There are 10 stickers on a page. If you have 22 pages of stickers, how
         many stickers do you have?
         */
-
+int stickers=10;
+int pages=22;
+int pages_total=stickers*pages;
+System.out.println("stickers do you have is: "+pages_total);
         /*
         39. There are 96 cupcakes for 8 children to share. How much will each
         person get if they share the cupcakes equally?
         */
-
+int cupcakes=96;
+int children=8;
+int total_canHave=cupcakes/children;
+System.out.println("total_canHave: "+total_canHave);
         /*
         40. She made 47 gingerbread cookies which she will distribute equally in
         tiny glass jars. If each jar is to contain six cookies each, how many
         cookies will not be placed in a jar?
         */
-
+int gingerbread=47;
+int jars=6;
+int total_gingerbread=gingerbread%jars;
+System.out.println("total_gingerbread: "+total_gingerbread);
         /*
         41. She also prepared 59 croissants which she plans to give to her 8
         neighbors. If each neighbor received and equal number of croissants,
         how many will be left with Marian?
         */
-
+int croissants=59;
+int neighbors=8;
+int total_croissants=croissants%neighbors;
+System.out.println("total_croissants: "+total_croissants);
         /*
         42. Marian also baked oatmeal cookies for her classmates. If she can
         place 12 cookies on a tray at a time, how many trays will she need to
         prepare 276 oatmeal cookies at a time?
         */
-
+int prepare=276;
+int tray=12;
+int total_tray=prepare/tray;
+System.out.println("total_tray: "+total_tray);
         /*
         43. Marian’s friends were coming over that afternoon so she made 480
         bite-sized pretzels. If one serving is equal to 12 pretzels, how many
         servings of bite-sized pretzels was Marian able to prepare?
         */
-
+int pretzels=480;
+int serving=12;
+int total_pretzels=pretzels/serving;
+System.out.println("total_pretzels: "+total_pretzels);
         /*
         44. Lastly, she baked 53 lemon cupcakes for the children living in the city
         orphanage. If two lemon cupcakes were left at home, how many
         boxes with 3 lemon cupcakes each were given away?
         */
-
+int cupcakes1=53-2;
+int boxes=3;
+int total_boxes=cupcakes1/boxes;
+System.out.println("total_boxes: "+total_boxes);
         /*
         45. Susie's mom prepared 74 carrot sticks for breakfast. If the carrots
         were served equally to 12 people, how many carrot sticks were left
         uneaten?
         */
-
+int carrot=74;
+int served=12;
+int total_served=carrot%served;
+System.out.println("total_served: "+total_served);
         /*
         46. Susie and her sister gathered all 98 of their teddy bears and placed
         them on the shelves in their bedroom. If every shelf can carry a
         maximum of 7 teddy bears, how many shelves will be filled?
         */
-
+int teddy=98;
+int shelf=7;
+int total_shelf=teddy/shelf;
+System.out.println("total_shelf: "+total_shelf);
         /*
         47. Susie’s mother collected all family pictures and wanted to place all of
         them in an album. If an album can contain 20 pictures, how many
         albums will she need if there are 480 pictures?
         */
-
+int pictures=480;
+int album=20;
+int total_album=pictures/album;
+System.out.println("total_album: "+total_album);
         /*
         48. Joe, Susie’s brother, collected all 94 trading cards scattered in his
         room and placed them in boxes. If a full box can hold a maximum of 8
         cards, how many boxes were filled and how many cards are there in
         the unfilled box?
         */
+int cards=94;
+int boxes1=8;
+int total_boxes1=cards/boxes1;
+int total_unfilled=cards%boxes1;
 
+System.out.println("total_boxes1: "+total_boxes1+"   total_unfilled   "+total_unfilled);
         /*
         49. Susie’s father repaired the bookshelves in the reading room. If he has
         210 books to be distributed equally on the 10 shelves he repaired,
         how many books will each shelf contain?
         */
-
+int books=210;
+int shelves=10;
+int total_shelves=books/shelves;
+System.out.println("total_shelves: "+total_shelves);
         /*
         50. Cristina baked 17 croissants. If she planned to serve this equally to
         her seven guests, how many will each have?
         */
-
+int croissants1=17;
+int guests=7;
+int total_guests=croissants1/guests;
+System.out.println("total_guests: "+total_guests);
         /*
             CHALLENGE PROBLEMS
         */
