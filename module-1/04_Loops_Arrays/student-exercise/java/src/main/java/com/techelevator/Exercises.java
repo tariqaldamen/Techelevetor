@@ -103,7 +103,7 @@ public class Exercises {
 		   int count=0;
 		   
 	        for(int i=nums.length-1; i >=0; i--){
-	                if(count<nums.length)
+	              
 	                	newArray[count]=nums[i];
 	                count++;
 	        }
@@ -207,7 +207,7 @@ public class Exercises {
 	 */
 	public boolean has22(int[] nums) {
 		boolean count=false;
-		for (int j = 0; j < nums.length; j++) 
+		for (int j = 0; j < nums.length-1; j++) 
 		{
 			if(nums[j]==nums[j+1])
 			count= true;
