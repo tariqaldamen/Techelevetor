@@ -21,7 +21,7 @@ public class DecimalToBinary {
 			
 			System.out.print("Please enter in a series of decimal values (separated by spaces): ");
 			Decimal_to_Binary=insert.nextLine();
-		//******************************************************************	
+		//*ß*****************************************************************	
 			String []space_separated=Decimal_to_Binary.split(" ");
 			int []change_space_separated_to_int= new int[space_separated.length];
 			
