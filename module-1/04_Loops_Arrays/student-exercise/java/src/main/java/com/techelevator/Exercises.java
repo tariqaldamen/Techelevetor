@@ -10,9 +10,16 @@ public class Exercises {
 	 firstLast6([13, 6, 1, 2, 3]) → false
 	 */
 	public boolean firstLast6(int[] nums) {
+
 		if(nums[0]==6||nums[nums.length-1]==6)
 			return true;
 		
+
+		
+		if (nums[0] == 6 || nums[nums.length-1] == 6) {
+			return true;
+		}
+
 		return false;
 	}
 
@@ -76,16 +83,17 @@ public class Exercises {
 	 rotateLeft3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] rotateLeft3(int[] nums) {
-		   int[] newArray = new int[nums.length];
+		int removed = nums[0];
+		for (int i = 1; i < nums.length; i += 2) {
+		nums[i - 1] = nums[i];
+		}
+		for (int i = nums.length - 1; i == nums.length - 1; i++) {
+		nums[i - 1] = nums[i];
+		}
+		nums[nums.length - 1] = removed;
+		return nums;
+		
 
-	        for(int i = 0; i <=nums.length; i++){
-	            
-	                for (int j = 3; j >= newArray.length; j--) 
-	                {
-	                    newArray[j]=nums[i];
-	                }  
-	        }
-			return newArray;
 	}
 
 	/*
