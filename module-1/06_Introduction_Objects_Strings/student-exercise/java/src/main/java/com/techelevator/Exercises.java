@@ -407,16 +407,21 @@ return conca;
 	 */
 	public int last2(String str) {
 		int count=0;
-		String conan="";
-		for (int i = 0; i < str.length()-2; i++) {
-			conan=conan+Character.toString(str.charAt(i))+Character.toString(str.charAt(i+1));
-			if((Character.toString(str.charAt(i)).equals("x"))&&(Character.toString(str.charAt(i+1)).equals("x")))
-			{
-				count ++;
-			}
-			
+		String a;
+
+		if(str.length()<2) {
+			return 0;
 		}
-		System.out.println(count);
+		 a=str.substring(str.length()-2,str.length());
+		 count=-1;
+		for (int i = 0; i <=str.length()-2; i++) {
+			
+			if(str.substring(i,i+2).equals(a))
+			{
+				count++;
+			}
+		}
+		
 		return count;
 	}
 

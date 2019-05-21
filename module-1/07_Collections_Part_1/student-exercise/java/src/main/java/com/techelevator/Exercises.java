@@ -9,6 +9,8 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
 
+import javax.swing.ListCellRenderer;
+
 public class Exercises {
 
 	/*
@@ -22,7 +24,11 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"] 
 	 */
 	public List<String> array2List(String[] stringArray) {
-		return null;
+		List<String> newarray2=new ArrayList<String>();
+		for (int i = 0; i < stringArray.length; i++) {
+			newarray2.add(stringArray[i]);
+		}
+		return newarray2;
 	}
 	
 	/*
@@ -32,7 +38,12 @@ public class Exercises {
 	 list2Array( ["Left", "Right", "Forward", "Back"] )  ->  {"Left", "Right", "Forward", "Back"}
 	 */
 	public String[] list2Array(List<String> stringList) {
-		return null;
+		
+		String []newarray=new String[stringList.size()]; 
+		for (int i = 0; i < newarray.length; i++) {
+			newarray[i]=stringList.get(i);
+		}
+		return newarray;
 	}
 	
 	/*
@@ -43,7 +54,13 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+		List<String> newrray=new ArrayList <String>();
+		for (int i = 0; i < stringArray.length; i++) {
+			if(stringArray[i].length()!=4)
+			newrray.add(stringArray[i]);
+		}
+		
+		return newrray;
 	}
 
 
@@ -56,7 +73,14 @@ public class Exercises {
 		-> ["way", "the", "all", "jingle", "bells", "jingle", "bells", "jingle"]
 	 */
 	public List<String> reverseList(List<String> stringList) {
-		return null;
+		List<String> newarr=new ArrayList<String>();
+		int count=stringList.size()-1;
+		for (int i = 0; i <stringList.size(); i++) {
+			newarr.add(stringList.get(count));
+			count--;
+		}
+		
+		return newarr;
 	}
 
 	/*
@@ -66,7 +90,13 @@ public class Exercises {
 	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
-		return null;
+		
+		List<Double> newArray=new ArrayList<Double>();
+		for (int i = 0; i < intArray.length; i++) {
+			Double Valuedidise=new Double(intArray[i]/2d);
+			newArray.add(Valuedidise);
+		}
+		return newArray;
 	}
 	
 	/*
@@ -76,7 +106,13 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 64362
 	 */
 	public Integer findLargest(List<Integer> integerList) {
-		return null;
+		Integer maxvalue=new Integer(0);
+
+		for (int i = 0; i < integerList.size(); i++) {
+			
+			 maxvalue=Math.max(maxvalue,integerList.get(i));
+		}
+		return maxvalue;
 	}
 	
 	/*
@@ -86,7 +122,15 @@ public class Exercises {
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]  
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+		List<Integer> newArray=new ArrayList<Integer>();
+		for (int i = 0; i < integerArray.length; i++) {
+			if(integerArray[i]%2!=0)
+			{
+				newArray.add(integerArray[i]);
+			}
+		}
+		
+		return newArray;
 	}
 	
 	/* 
@@ -97,7 +141,17 @@ public class Exercises {
 	 foundIntTwice( [9, 23, 44, 2, 88, 44], 44) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
-		return false;
+	
+		Boolean count=false;
+		int count2=0;
+		for (int i = 0; i < integerList.size(); i++) {
+			if(integerList.get(i)==intToFind)
+			{
+				count2++;
+				if(count2>=2)
+					count=true;}
+		}
+		return count;
 	}
 	
 	/*
@@ -113,7 +167,30 @@ public class Exercises {
 	 HINT: To convert an integer x to a string you can call x.toString() in your code (e.g. if x = 1 then x.ToString() equals "1")
 	 */
 	public List<String> fizzBuzzList(Integer[] integerArray) {
-		return null;
+		List<String> newarr=new ArrayList<String>();
+		String multiple=new String("");
+		
+		for (int i = 0; i < integerArray.length; i++) {
+			
+			if (integerArray[i] % 3 == 0 && integerArray[i] % 5 != 0) {
+				//multiple = integerArray[i].toString();
+				multiple ="Fizz";
+				newarr.add(multiple);
+			}
+			else if (integerArray[i] % 5 == 0 && integerArray[i] % 3 != 0) {
+				multiple = "Buzz";
+				newarr.add(multiple);
+			}
+			else if (integerArray[i] % 5 == 0 && integerArray[i] % 3 == 0) {
+				multiple = "FizzBuzz";
+				newarr.add(multiple);
+			}
+			else {
+				multiple = integerArray[i].toString();
+				newarr.add(multiple);
+			}
+		}
+		return newarr;
 	}
 
 	/*
@@ -124,7 +201,24 @@ public class Exercises {
 	 interleaveLists( [1, 2, 3], [4, 5, 6] )  ->  [1, 4, 2, 5, 3, 6]
 	 */
 	public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
-		return null;
+		
+		
+		List<Integer> newarr=new ArrayList<Integer>();
+		int max_of_length= Math.max(listOne.size(),listTwo.size())-1;
+		
+		for (int i = 0; i <=max_of_length; i++) {
+			if(listOne.size()>i)
+			newarr.add(listOne.get(i));
+			
+			if(listTwo.size()>i)
+			newarr.add(listTwo.get(i));
+		
+		}
+		
+		for (int i = 0; i < listOne.size()+listTwo.size(); i++) {
+			
+		}
+		return newarr;
 	}
 
 	/*
@@ -137,7 +231,30 @@ public class Exercises {
 	 boardingGate( [0, -1, 44, 31, 17, 7, 27, 16, 26, 6] ) -> [7, 6, 17, 16, 27, 26]
 	 */
 	public List<Integer> boardingGate(List<Integer> seatNumberList) {
-		return null;
+		List<Integer> newarr=new ArrayList<Integer>();
+		
+for (int i = 0; i < seatNumberList.size(); i++) {
+	if(seatNumberList.get(i)>=1&&seatNumberList.get(i)<=10)
+	{
+		newarr.add(seatNumberList.get(i));
+	}
 	}
 
+	for (int i = 0; i < seatNumberList.size(); i++) {
+	 if(seatNumberList.get(i)>=11&&seatNumberList.get(i)<=20)
+	{
+		newarr.add(seatNumberList.get(i));
+	}
+	 }
+	
+	for (int i = 0; i < seatNumberList.size(); i++) {
+	 if(seatNumberList.get(i)>=21&&seatNumberList.get(i)<=30)
+	{
+		newarr.add(seatNumberList.get(i));
+	}
+	 }
+
+		return newarr;
+	
+}
 }
