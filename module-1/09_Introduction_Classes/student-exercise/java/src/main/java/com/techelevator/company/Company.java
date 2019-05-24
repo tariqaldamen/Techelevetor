@@ -11,7 +11,7 @@ public class Company {
 	
     public Company() {
 	
-    	System.out.println(name+ "mkmklmkl");
+    	
 	}
 
 	public String getCompanySize()
@@ -24,16 +24,16 @@ public class Company {
     	{
     		return "medium";
     	}
-		else if (numberOfEmployees > 250) {
+		else  {
 			return "large";
 		}
-		return null;
+		
 	}
     
     public double getProfit()
     {
     	
-    	return revenue-expenses;
+    	return this.revenue-this.expenses;
     	
     }
 	
@@ -49,16 +49,16 @@ public class Company {
 	public void setNumberOfEmployees(int numberOfEmployees) {
 		this.numberOfEmployees = numberOfEmployees;
 	}
-	public Double getRevenue() {
+	public double getRevenue() {
 		return revenue;
 	}
-	public void setRevenue(Double revenue) {
+	public void setRevenue(double revenue) {
 		this.revenue = revenue;
 	}
-	public Double getExpenses() {
+	public double getExpenses() {
 		return expenses;
 	}
-	public void setExpenses(Double expenses) {
+	public void setExpenses(double expenses) {
 		this.expenses = expenses;
 	}
 }
