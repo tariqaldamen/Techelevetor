@@ -34,7 +34,9 @@ public class Exercises {
 			return "unknown";
 		}
 		String Lower = (animalName.toLowerCase());
+
 		Lower = Lower.substring(0, 1).toUpperCase() + Lower.substring(1);
+
 		Map<String, String> Animals = new HashMap<String, String>();
 		Animals.put("Rhino", "Crash");
 		Animals.put("Giraffe", "Tower");
@@ -46,6 +48,7 @@ public class Exercises {
 		Animals.put("Deer", "Herd");
 		Animals.put("Dog", "Pack");
 		Animals.put("Crocodile", "Float");
+
 		if (!Animals.containsKey(Lower)) {
 			return "unknown";
 
@@ -107,9 +110,7 @@ public class Exercises {
 		if (peterPaul.get("Peter") > 0 && peterPaul.get("Paul") < 1000) {
 			peterPaul.put("Paul", (peterPaul.get("Paul")) + (peterPaul.get("Peter") / 2));
 			peterPaul.put("Peter", (peterPaul.get("Peter") - peterPaul.get("Peter") / 2));
-
 		}
-
 		return peterPaul;
 	}
 
@@ -323,6 +324,7 @@ public class Exercises {
 				test = words[i].substring(words[i].length() - 2, words[i].length());
 				count = -1;
 				int b = words[i].length() - 2;
+				
 				for (int j = 0; j <= b; j++) {
 					if (words[i].substring(j, j + 2).equals(test)) {
 						count++;
