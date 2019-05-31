@@ -71,7 +71,7 @@ Tolls for trucks are based upon the number of axles.
 > | 6     | 0.045    |
 > | 8+    | 0.048    |
 >
-> toll = rate per mile \* distance
+> toll = rate per mile * distance
 
 #### Tank
 
