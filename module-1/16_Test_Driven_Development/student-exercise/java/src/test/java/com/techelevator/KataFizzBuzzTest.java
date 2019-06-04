@@ -17,6 +17,10 @@ public class KataFizzBuzzTest {
 		Assert.assertEquals(("4"), test.FizzBuzz(4));
 		Assert.assertEquals(("Buzz"), test.FizzBuzz(5));
 		Assert.assertEquals(("FizzBuzz"), test.FizzBuzz(15));
+		Assert.assertEquals(("22"), test.FizzBuzz(22));
+		Assert.assertEquals((""), test.FizzBuzz(0));
+		Assert.assertEquals(("Fizz"), test.FizzBuzz(13));
+		Assert.assertEquals(("FizzBuzz"), test.FizzBuzz(35));
 	
 	}
 	}
