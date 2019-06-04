@@ -9,6 +9,8 @@ public class KataRomanNumerals {
 		{
 			return "I";
 		}
+		else if(n == 10)
+			return "X";
 		return null;
 	}
 }
