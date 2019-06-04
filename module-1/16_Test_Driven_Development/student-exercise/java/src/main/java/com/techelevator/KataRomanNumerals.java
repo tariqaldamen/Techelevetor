@@ -5,18 +5,9 @@ public class KataRomanNumerals {
 	
 	public String convertToRomanNumeral(int n)
 	{
-		if(n == 1)
-		{
-			return "I";
-		}
-		else if(n == 10) {
-			return "X";
-	}
-		else if(n == 7)
-		{
-			return "VII";
-	}
-		return null;
-	}
+		String [] RomanNumeralFrom1_9 = new String[] {" ","I","II","III","IV","V","VI","VII","VIII","IX","X"};
+		
+		return RomanNumeralFrom1_9[n];
 	
+}
 }
