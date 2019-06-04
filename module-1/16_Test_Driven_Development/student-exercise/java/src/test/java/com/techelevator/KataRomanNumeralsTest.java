@@ -27,7 +27,7 @@ public class KataRomanNumeralsTest {
 		Assert.assertEquals("XVIII", test.convertToRomanNumeral(18));
 		Assert.assertEquals("XXIII", test.convertToRomanNumeral(23));
 		Assert.assertEquals("C", test.convertToRomanNumeral(100));
-		Assert.assertEquals("CIX", test.convertToRomanNumeral(109));
+		
 
 }
 	
