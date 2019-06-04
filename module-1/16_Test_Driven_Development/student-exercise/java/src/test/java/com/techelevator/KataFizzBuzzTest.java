@@ -24,6 +24,9 @@ public class KataFizzBuzzTest {
 		Assert.assertEquals(("FizzBuzz"), test.FizzBuzz(53));
 		Assert.assertEquals(("Buzz"), test.FizzBuzz(5));
 		Assert.assertEquals(("Buzz"), test.FizzBuzz(51));
+		Assert.assertEquals(("FizzBuzz"), test.FizzBuzz(53));
+
+		
 	
 	}
 	}

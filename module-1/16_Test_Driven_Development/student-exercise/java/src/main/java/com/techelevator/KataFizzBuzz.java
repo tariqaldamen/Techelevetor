@@ -33,6 +33,10 @@ public String FizzBuzz(int number)
 	{
 		return "Fizz";
 	}
+	else if(number > 9 && (converToString.charAt(0) =='5' || converToString.charAt(1) =='5'))
+	{
+		return "Buzz";
+	}
 	
 
 	return converToString;
