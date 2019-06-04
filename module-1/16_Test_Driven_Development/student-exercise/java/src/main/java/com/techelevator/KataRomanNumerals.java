@@ -9,8 +9,14 @@ public class KataRomanNumerals {
 		{
 			return "I";
 		}
-		else if(n == 10)
+		else if(n == 10) {
 			return "X";
+	}
+		else if(n == 7)
+		{
+			return "VII";
+	}
 		return null;
 	}
+	
 }
