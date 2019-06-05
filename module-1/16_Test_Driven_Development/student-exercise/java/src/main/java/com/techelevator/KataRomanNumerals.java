@@ -59,6 +59,11 @@ public class KataRomanNumerals {
 				"M" }; 
 		   String RomanN = "";
 		   int value = n;
+		   if(value > 2000)
+		    {
+		    	RomanN = "MM";
+		    	value = value - 2000;	
+		    }
 		    if(value / 1000 == 1)
 		    {
 		    	RomanN = "M";
