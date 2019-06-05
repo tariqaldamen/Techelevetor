@@ -21,6 +21,12 @@ public class KataRomanNumerals {
 				RomanNumeral1_100.add(RomanNumeralFrom20s_109s[i] + RomanNumeralFrom1_10[j]);
 			}
 		}
+		if(n > 100 && n< 200)
+		{
+			int mode = n % 100;
+		
+			return "C"+RomanNumeral1_100.get(mode);
+		}
 
 		return RomanNumeral1_100.get(n);
 
