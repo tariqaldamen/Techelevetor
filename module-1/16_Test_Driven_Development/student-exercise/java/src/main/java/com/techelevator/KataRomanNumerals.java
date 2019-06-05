@@ -43,6 +43,24 @@ public class KataRomanNumerals {
 		     }
 			return "CCC"+RomanNumeral1_100.get(mode);
 		}
+		if(n >= 400 && n< 500)
+		{
+			int mode = n % 400;
+		     if(mode == 0)
+		     {
+		    	 return "CD";
+		     }
+			return "CD"+RomanNumeral1_100.get(mode);
+		}
+		if(n >= 500 && n< 600)
+		{
+			int mode = n % 500;
+		     if(mode == 0)
+		     {
+		    	 return "D";
+		     }
+			return "D"+RomanNumeral1_100.get(mode);
+		}
 
 		return RomanNumeral1_100.get(n);
 
