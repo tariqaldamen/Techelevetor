@@ -21,9 +21,9 @@ public class KataRomanNumerals {
 				RomanNumeral1_100.add(RomanNumeralFrom20s_109s[i] + RomanNumeralFrom1_10[j]);
 			}
 		}
-	
 
 		return RomanNumeral1_100.get(n);
 
 	}
+
 }
