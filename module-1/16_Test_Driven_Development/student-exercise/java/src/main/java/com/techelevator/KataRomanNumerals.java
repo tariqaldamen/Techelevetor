@@ -27,14 +27,21 @@ public class KataRomanNumerals {
 		
 			return "C"+RomanNumeral1_100.get(mode);
 		}
-           if(n >= 200 && n< 300)
-		{
+		if (n >= 200 && n < 300) {
 			int mode = n % 200;
+			if (mode == 0) {
+				return "CC";
+			}
+			return "CC" + RomanNumeral1_100.get(mode);
+		}
+		if(n >= 300 && n< 400)
+		{
+			int mode = n % 300;
 		     if(mode == 0)
 		     {
-		    	 return "CC";
+		    	 return "CCC";
 		     }
-			return "CC"+RomanNumeral1_100.get(mode);
+			return "CCC"+RomanNumeral1_100.get(mode);
 		}
 
 		return RomanNumeral1_100.get(n);
