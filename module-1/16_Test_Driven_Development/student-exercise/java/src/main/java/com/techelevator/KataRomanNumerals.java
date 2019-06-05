@@ -56,36 +56,31 @@ public class KataRomanNumerals {
 			return "D" + RomanNumeral1_100.get(mode);
 		}
 		String[] RomanNumeralFrom100s = new String[] { " ", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM",
-				"M" }; 
-		   String RomanN = "";
-		   int value = n;
-		   if(value > 2000)
-		    {
-		    	RomanN = "MM";
-		    	value = value - 2000;	
-		    }
-		    if(value / 1000 == 1)
-		    {
-		    	RomanN = "M";
-		    	value = value % 1000;	
-		    }
-		    if(value >= 100 && value <= 999)
-		    {
-		    	int knowNumbersOf100s = value / 100 ;
-		    	RomanN =RomanN+ RomanNumeralFrom100s[knowNumbersOf100s];
-		    	value = value % 100;	
-		    }
-		    if(value > 0 && value < 100)
-		    {
-		    	
-		    	RomanN = RomanN+RomanNumeral1_100.get(value);
-		    	
-		    }
+				"M" };
+		String RomanN = "";
+		int value = n;
+		if (value > 2000) {
+			RomanN = "MM";
+			value = value - 2000;
+		}
+		if (value / 1000 == 1) {
+			RomanN = "M";
+			value = value % 1000;
+		}
+		if (value >= 100 && value <= 999) {
+			int knowNumbersOf100s = value / 100;
+			RomanN = RomanN + RomanNumeralFrom100s[knowNumbersOf100s];
+			value = value % 100;
+		}
+		if (value > 0 && value < 100) {
 
-		    if(n > 500)
-		    {
-		    	return RomanN;
-		    }
+			RomanN = RomanN + RomanNumeral1_100.get(value);
+
+		}
+
+		if (n > 500) {
+			return RomanN;
+		}
 		return RomanNumeral1_100.get(n);
 
 	}
