@@ -21,22 +21,7 @@ public class KataRomanNumerals {
 				RomanNumeral1_100.add(RomanNumeralFrom20s_109s[i] + RomanNumeralFrom1_10[j]);
 			}
 		}
-		 String s = "";
-		    while (n >= 1000) {
-		        s += "M";
-		        n -= 1000;        }
-		    while (n >= 900) {
-		        s += "CM";
-		        n -= 900;
-		    }
-		    while (n >= 500) {
-		        s += "D";
-		        n -= 500;
-		    }
-		    while (n >= 400) {
-		        s += "CD";
-		        n -= 400;
-		    }
+	
 
 		return RomanNumeral1_100.get(n);
 
