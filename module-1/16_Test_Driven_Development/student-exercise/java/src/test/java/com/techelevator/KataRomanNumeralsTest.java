@@ -38,6 +38,15 @@ public class KataRomanNumeralsTest {
 		Assert.assertEquals("CCCXCIX", test.convertToRomanNumeral(399));
 		Assert.assertEquals("CDL", test.convertToRomanNumeral(450));
 		Assert.assertEquals("D", test.convertToRomanNumeral(500));
+		Assert.assertEquals("CD", test.convertToRomanNumeral(400));
+		Assert.assertEquals("CCC", test.convertToRomanNumeral(300));
+		Assert.assertEquals("DL", test.convertToRomanNumeral(550));
+		Assert.assertEquals("DL", test.convertToRomanNumeral(600));
+		Assert.assertEquals("DCCL", test.convertToRomanNumeral(750));
+		Assert.assertEquals("CM", test.convertToRomanNumeral(900));
+		Assert.assertEquals("M", test.convertToRomanNumeral(1000));
+
+
 
 
 
