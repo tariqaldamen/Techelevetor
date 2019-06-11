@@ -3,7 +3,7 @@
 -- Populations of all countries in descending order
 SELECT name, population
 FROM country
-ORDER BY population DESC;
+ORDER BY population;
 
 --Names of countries and continents in ascending order
 SELECT name, continent
@@ -88,10 +88,6 @@ WHERE countrycode = 'USA'
 GROUP BY district
 ORDER BY district;
 
--- SUBQUERIES
--- Find the names of cities under a given government leader
-
--- Find the names of cities whose country they belong to has not declared independence yet
 
 -- Additional samples
 -- You may alias column and table names to be more descriptive
