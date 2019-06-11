@@ -23,7 +23,7 @@ SELECT name, population, gnp FROM country WHERE gnp > 1000000 AND population < 1
 SELECT name, population FROM city WHERE population > 1000000;
 
 -- The name and average life expectancy of all countries in southern regions
-SELECT name, lifeexpectancy, region FROM country WHERE region like '%south%';
+SELECT name, lifeexpectancy, region FROM country WHERE region like '%South%';
 
 -- The name and average life expectancy of all countries in southern regions for which an average life expectancy has been provided (i.e. not equal to null)
 SELECT name, lifeexpectancy FROM country WHERE region like '%south%' and lifeexpectancy is not null;
