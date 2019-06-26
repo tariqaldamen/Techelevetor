@@ -13,5 +13,128 @@
     box-sizing: border-box;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
   }
+ 
+  
+  body > aside, body > main {
+    display: inline-block;
+    width: 200px;
+    margin-right: px;
+    vertical-align: top;  
+    
+}
+main{
+  border-left: 1px solid #00ADEE;
+  padding: 20px;
+}
+
+ main > img{
+  vertical-align: top;
+  width: 1170px;
+  height: 480px;
+  border-radius: 3px;
+  margin-bottom: 200px;
+  position: relative;
+  bottom: -30px;
+  
+}
+header > img
+{
+  vertical-align: top;
+  width: 200px;
+  height: 90px;
+  border-radius:0px;
+  
+
+}
+
+aside > img
+{
+  vertical-align: top;
+  border-radius:0px;
+  width: 60%;
+  margin-left: 22%;
   
   
+}
+
+#what-we-do, #our-work, #contact-us {
+  display : inline-block;
+  border-top: 500px;
+   border-left: 1px solid rgba(170, 239, 130, 0.8);
+  
+   padding: 10px;
+   width: 390px;
+  }
+  #what-we-do{
+  border-left: 0px;
+ 
+  }
+  section{
+  position: absolute;
+  left: 15%;
+  bottom: 50px;
+  display:block;
+  
+
+  
+  
+  }
+  
+a{
+  color: #00ADEE;
+  text-align: center;
+  list-style: none;
+  text-decoration:none;
+  border-bottom: 1px solid  rgba(0, 173, 238, 0.4);
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 17px;
+  line-height: 400%;
+  
+}
+
+ul{
+  list-style: none;
+  font-weight: bold;
+  display: center; text-align: center;
+  margin-left: -25px;
+}
+li{
+  text-align: center; 
+  list-style: none;
+
+  display: inline-block;
+}
+
+section h2{
+   color:  rgba(170, 239, 135, 0.8);
+}
+
+#logos img{
+ 
+  width: 20%;
+  display: inline-block;
+
+  position: relative;
+  bottom: -200px;
+  left: 1000px;
+
+}
+
+footer>p{
+  display : inline-block;
+  position: absolute;
+  bottom: 10px;
+  width: 240px;
+  border-radius: 3px;
+}
+
+
+#social{
+  display: none;
+  border: 3px solid #73AD21;
+}
+.subheading{
+  display: none;
+}
