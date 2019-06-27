@@ -116,12 +116,15 @@ library --%>
 				exited.  If no "when" tag is executed, then the
 				"otherwise" tag is evaluated. --%>				
 				<c:choose>
+				
 					<c:when test="${tempF <= 32}">
 						<c:set var="rowClassAttribute" value="freezing" />
 					</c:when>
+					
 					<c:when test="${tempF >= 212}">
 						<c:set var="rowClassAttribute" value="boiling" />
 					</c:when>
+					
 					<c:otherwise>
 						<c:set var="rowClassAttribute" value="" />
 					</c:otherwise>
