@@ -7,6 +7,25 @@
 	</head>
 	<body>
 	
+		<%
+		    String greeting = "";
+		    String language = request.getParameter("lang");
+		    if (language != null) {
+			    if(language.equals("FR")) {
+			        greeting = "Bonjour monde";
+			    } else if(language.equals("ES")) {
+			        greeting = "Hola mundo";
+			    } else if(language.equals("DE")) {
+			        greeting = "Hallo Welt";
+			    } else {
+			        greeting = "Hello World";    
+			    }
+		    }
+		%>
+		<h1><%= greeting %></h1>
+	
+	
+	
 		<% pageContext.setAttribute("theLight", "green"); %>
 		
 		<h1>Using scriptlets</h1>
