@@ -14,6 +14,17 @@
 		<h1>Exercise 3 - Echo</h1>
 		
 		<ul>
+		
+		<li>
+	
+		<c:set var= "word" value= "Hello"></c:set>
+		<c:set var= "count" value= "25"></c:set>
+		<c:forEach begin="0" end="25" var = "con">
+		<a style="font-size:${count}px;">${word}</a>
+		</br>
+		<c:set var= "count" value= "${count-1}"> </c:set>
+		</c:forEach>
+		
 		<%--
 			Given two query string parameters, "word" and "count":
 			
@@ -24,6 +35,7 @@
 			 
 			See exercise3-echo.png for example output
 		 --%>
+		 <li>
 		</ul>
 		
 	</body>

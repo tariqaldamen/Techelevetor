@@ -26,41 +26,31 @@ li {
 <body>
 	<h1>Exercise 1 - FizzBuzz</h1>
 	<ul>
-
+	<li>
 		<c:forEach begin="1" end="100" var="inches">
-
-	<c:choose>
-			<c:when test="${inches % 3 == 0 && inches % 5 == 0}">
-				<c:set var="rowClassAttribute" value="FizzBuzz!" />
-				<td>${rowClassAttribute}</td>
-			</c:when>
-		
+			<c:choose>
+				<c:when test="${inches % 3 == 0 && inches % 5 == 0}">
+					<c:set var="FizzBuzz" value="FizzBuzz!" />
+					<a class = "fizzbuzz">${FizzBuzz}</a>
+					</br>
+				</c:when>
 				<c:when test="${inches % 5 == 0}">
-				<c:otherwise>
-					<c:set var="rowClassAttribute1" value="Buzz!" />
-					
-					<td>${rowClassAttribute1}</td>
+					<c:set var="Buzz" value="Buzz!" />
+					<a class = "buzz">${Buzz}</a>
+					</br>
 				</c:when>
 				<c:when test="${inches % 3 == 0}">
-					<c:set var="rowClassAttribute2" value="Fizz!" />
-					<td>${rowClassAttribute3}</td>
+					<c:set var="Fizz" value="Fizz!" />
+					<a class = "fizz">${Fizz}</a>
+					</br>
 				</c:when>
-				
-			</c:otherwise>
-	
-				</c:choose>
+				<c:otherwise>
+					<a>${inches}</a>
+					</br>
+				</c:otherwise>
+			</c:choose>
 		</c:forEach>
-		<%--
-				Add a list item (i.e. <li>) containing each of the numbers from 1 to 100.
-				
-				if the number is divisible by 3, show "Fizz!" instead and style the item using the "fizz" class
-				
-				if the number is divisible by 5, show "Buzz!" instead and style the item using the "buzz" class
-				
-				if the number is divisible by both 3 and 5, show "FizzBuzz!" instead  and style the item using the "fizzbuzz" class
-				
-				see exercise1-fizzbuzz.png for example output
-			 --%>
+		<li>
 	</ul>
 </body>
 </html>
