@@ -29,6 +29,7 @@
 
 		<!-- Container for all of the Products -->
 		<!-- The list of products is available using the `products` variable -->
+
 		<div id="grid">
 
 			<!-- 
@@ -37,78 +38,120 @@
 			-->
 
 			<!-- Standard Product -->
-			<div class="tile ">
-				<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
-				<a class="product-image" href="#"> 
-					<img src="<c:url value="/images/product-images/grey-sofa.jpg" />" />
-				</a>
-				<div class="details">
-					<p class="name">Grey Sofa</p>
+			<c:forEach var="product" items="${products}">
 
-					<!-- .filled will make the star solid -->
-					<div class="rating">
-						<span class="filled">&#9734;</span> 
-						<span class="filled">&#9734;</span>
-						<span>&#9734;</span> 
-						<span>&#9734;</span> 
-						<span>&#9734;</span>
+				<c:if
+					test="${product.topSeller == false && product.remainingStock != 0}">
+					<div class="tile ">
+
+
+						<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
+						<a class="product-image" href="#"> <img
+							src="<c:url value="/images/product-images/${product.imageName}" />" />
+						</a>
+						<div class="details">
+
+							<p class="name">
+								<c:out value="${product.name}" />
+							</p>
+
+							<!-- .filled will make the star solid -->
+
+
+							<div class="rating">
+								<c:forEach var="star" begin="1" end="${product.averageRating}">
+									<span class="filled">&#9734</span>
+								</c:forEach>
+								<c:forEach var="no-star" begin="${product.averageRating}"
+									end="4">
+									<span>&#9734</span>
+								</c:forEach>
+							</div>
+							<c:if
+								test="${product.remainingStock > 0 && product.remainingStock <= 5}">
+								<span class="product-alert">Only
+									${product.remainingStock} left!</span>
+							</c:if>
+
+							<p class="price">$${product.price}</p>
+						</div>
+
 					</div>
+				</c:if>
 
-					<p class="price">$939.00</p>
-				</div>
-			</div>
 
-			<div class="tile ">
-				<!-- Include this if the product is considered a Top Seller -->
-				<span class="banner top-seller">Top Seller!</span>
+				<c:if
+					test="${product.topSeller == true && product.remainingStock != 0}">
+					<div class="tile ">
 
-				<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
-				<a class="product-image" href="#"> 
-					<img src="<c:url value="/images/product-images/grey-sofa.jpg" />" />
-				</a>
-				<div class="details">
-					<p class="name">Grey Sofa</p>
+						<!-- Include this if the product is considered a Top Seller -->
+						<span class="banner top-seller">Top Seller!</span>
 
-					<!-- .filled will make the star solid -->
-					<div class="rating">
-						<span class="filled">&#9734;</span> 
-						<span class="filled">&#9734;</span>
-						<span class="filled">&#9734;</span> 
-						<span class="filled">&#9734;</span>
-						<span>&#9734;</span>
+						<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
+						<a class="product-image" href="#"> <img
+							src="<c:url value="/images/product-images/${product.imageName}" />" />
+						</a>
+
+						<div class="details">
+							<p class="name">
+								<c:out value="${product.name}" />
+							</p>
+
+							<!-- .filled will make the star solid -->
+							<div class="rating">
+								<c:forEach var="star" begin="1" end="${product.averageRating}">
+									<span class="filled">&#9734</span>
+								</c:forEach>
+								<c:forEach var="no-star" begin="${product.averageRating}"
+									end="4">
+									<span>&#9734</span>
+								</c:forEach>
+							</div>
+
+							<!-- Include this if the remaining quantity is greater than 0, but less than or equal to 5 -->
+							<c:if
+								test="${product.remainingStock > 0 && product.remainingStock <= 5}">
+								<span class="product-alert">Only
+									${product.remainingStock} left!</span>
+							</c:if>
+							<p class="price">$${product.price}</p>
+						</div>
+
 					</div>
+				</c:if>
 
-					<!-- Include this if the remaining quantity is greater than 0, but less than or equal to 5 -->
-					<span class="product-alert">Only 4 left!</span>
-					<p class="price">$939.00</p>
-				</div>
-			</div>
+				<!-- Add the .sold-out class if the remaining quantity is 0 -->
+				<c:if test="${ product.remainingStock == 0}">
+					<div class="tile sold-out">
+						<!-- Include this if the remaining quantity is 0 -->
+						<span class="banner">Sold Out</span>
 
-			<!-- Add the .sold-out class if the remaining quantity is 0 -->
-			<div class="tile sold-out">
-				<!-- Include this if the remaining quantity is 0 -->
-				<span class="banner">Sold Out</span>
+						<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
+						<a class="product-image" href="#"> <img
+							src="<c:url value="/images/product-images/grey-sofa.jpg" />" />
+						</a>
+						<div class="details">
+							<p class="name">${product.name}</p>
 
-				<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
-				<a class="product-image" href="#"> 
-					<img src="<c:url value="/images/product-images/grey-sofa.jpg" />" />
-				</a>
-				<div class="details">
-					<p class="name">Grey Sofa</p>
+							<!-- .filled will make the star solid -->
+							<div class="rating">
+								<c:forEach var="star" begin="1" end="${product.averageRating}">
+									<span class="filled">&#9734</span>
+								</c:forEach>
+								<c:forEach var="no-star" begin="${product.averageRating}"
+									end="4">
+									<span>&#9734</span>
+								</c:forEach>
+							</div>
 
-					<!-- .filled will make the star solid -->
-					<div class="rating">
-						<span class="filled">&#9734;</span> 
-						<span>&#9734;</span> 
-						<span>&#9734;</span>
-						<span>&#9734;</span> 
-						<span>&#9734;</span>
+							<p class="price">$${product.price}</p>
+						</div>
 					</div>
+				</c:if>
 
-					<p class="price">$939.00</p>
-				</div>
-			</div>
+			</c:forEach>
 		</div>
+
 	</div>
 </div>
 

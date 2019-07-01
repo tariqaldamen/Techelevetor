@@ -17,9 +17,10 @@
 		
 		<li>
 	
-		<c:set var= "word" value= "Hello"></c:set>
-		<c:set var= "count" value= "25"></c:set>
-		<c:forEach begin="0" end="25" var = "con">
+		<c:set var= "word" value= "${param.word}"></c:set>
+		<c:set var= "count" value= "${param.count}"></c:set>
+		
+		<c:forEach begin="0" end="${count}" var = "con">
 		<a style="font-size:${count}px;">${word}</a>
 		</br>
 		<c:set var= "count" value= "${count-1}"> </c:set>
