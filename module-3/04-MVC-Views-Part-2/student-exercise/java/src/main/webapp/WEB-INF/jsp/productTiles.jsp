@@ -26,7 +26,10 @@
 				test="${product.topSeller == false && product.remainingStock != 0}">
 				<div class="tile  ">
 					<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
-					<a class="product-image" href="#"> <img
+					<c:url value="/products/detail" var="productDetailsURL">
+						<c:param name="id" value="${product.id}" />
+					</c:url>
+					<a class="product-image" href="${productDetailsURL}"> <img
 						src="<c:url value="/images/product-images/${product.imageName}" />" />
 					</a>
 					<div class="details">
@@ -45,7 +48,7 @@
 						</div>
 						<c:if
 							test="${product.remainingStock > 0 && product.remainingStock <= 5}">
-							<p class="product-alert">${product.remainingStock} REMAINING!</p>
+							<p class="product-alert">${product.remainingStock}REMAINING!</p>
 						</c:if>
 
 						<p class="price">$${product.price}</p>
@@ -54,12 +57,15 @@
 			</c:if>
 
 			<!-- Add the .top-seller class if the product is considered a Top Seller -->
-			
+
 			<c:if
 				test="${product.topSeller == true && product.remainingStock != 0}">
 				<div class="tile top-seller ">
 					<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
-					<a class="product-image" href="#"> <img
+					<c:url value="/products/detail" var="productDetailsURL">
+						<c:param name="id" value="${product.id}" />
+					</c:url>
+					<a class="product-image" href="${productDetailsURL}"> <img
 						src="<c:url value="/images/product-images/${product.imageName}" />" />
 					</a>
 					<div class="details">
@@ -82,41 +88,42 @@
 						<p class="product-alert">Top Seller</p>
 						<!-- Add the X remaining product alert if the remaining quantity is greater than 0, but less than or equal to 5 -->
 						<c:if
-								test="${product.remainingStock > 0 && product.remainingStock <= 5}">
-								<p class="product-alert">
-									${product.remainingStock} REMAINING!</p>
-							</c:if>
+							test="${product.remainingStock > 0 && product.remainingStock <= 5}">
+							<p class="product-alert">${product.remainingStock} REMAINING!</p>
+						</c:if>
 						<p class="price">$${product.price}</p>
 					</div>
 				</div>
 			</c:if>
 			<!-- Add the .sold-out class if the Remaining Stock is 0 -->
-			<c:if
-				test="${product.remainingStock == 0}">
-			<div class="tile  sold-out">
-				<!-- Add the Sold Out banner if the Remaining Stock is 0 -->
-				<span class="banner">Sold Out</span>
+			<c:if test="${product.remainingStock == 0}">
+				<div class="tile  sold-out">
+					<!-- Add the Sold Out banner if the Remaining Stock is 0 -->
+					<span class="banner">Sold Out</span>
 
-				<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
-				<a class="product-image" href="#"> <img
-					src="<c:url value="/images/product-images/${product.imageName}" />" />
-				</a>
-				<div class="details">
-					<p class="name">
-						<a href="#">${product.name}</a>
-					</p>
+					<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
+					<c:url value="/products/detail" var="productDetailsURL">
+						<c:param name="id" value="${product.id}" />
+					</c:url>
+					<a class="product-image" href="${productDetailsURL}"> <img
+						src="<c:url value="/images/product-images/${product.imageName}" />" />
+					</a>
+					<div class="details">
+						<p class="name">
+							<a href="#">${product.name}</a>
+						</p>
 
-					<!-- .filled will make the star solid -->
-					<div class="rating">
-						<span class="filled">&#9734;</span> <span class="filled">&#9734;</span>
-						<span class="filled">&#9734;</span> <span class="filled">&#9734;</span>
-						<span>&#9734;</span>
+						<!-- .filled will make the star solid -->
+						<div class="rating">
+							<span class="filled">&#9734;</span> <span class="filled">&#9734;</span>
+							<span class="filled">&#9734;</span> <span class="filled">&#9734;</span>
+							<span>&#9734;</span>
+						</div>
+
+						<p class="price">$${product.price}</p>
 					</div>
-
-					<p class="price">$${product.price}</p>
 				</div>
-			</div>
-				</c:if>
+			</c:if>
 		</c:forEach>
 	</div>
 </div>

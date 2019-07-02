@@ -21,9 +21,9 @@
 		<div id="sorting-options">
 			<h3>Sort By</h3>
 			<ul>
-				<li><a href="#">Price - Low to High</a></li>
-				<li><a href="#">Price - High to Low</a></li>
-				<li><a href="#">Rating - High to Low</a></li>
+				<li><a href="?sortOrder=PriceLowToHigh">Price - Low to High</a></li>
+				<li><a href="?sortOrder=PriceHighToLow">Price - High to Low</a></li>
+				<li><a href="?sortOrder=RatingHighToLow">Rating - High to Low</a></li>
 			</ul>
 		</div>
 
@@ -46,7 +46,10 @@
 
 
 						<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
-						<a class="product-image" href="#"> <img
+						<c:url value="/products/detail" var="productDetailsURL">
+							<c:param name="id" value="${product.id}" />
+						</c:url>
+						<a class="product-image" href="${productDetailsURL}"> <img
 							src="<c:url value="/images/product-images/${product.imageName}" />" />
 						</a>
 						<div class="details">
@@ -88,7 +91,10 @@
 						<span class="banner top-seller">Top Seller!</span>
 
 						<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
-						<a class="product-image" href="#"> <img
+						<c:url value="/products/detail" var="productDetailsURL">
+							<c:param name="id" value="${product.id}" />
+						</c:url>
+						<a class="product-image" href="${productDetailsURL}"> <img
 							src="<c:url value="/images/product-images/${product.imageName}" />" />
 						</a>
 
@@ -127,8 +133,11 @@
 						<span class="banner">Sold Out</span>
 
 						<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
-						<a class="product-image" href="#"> <img
-							src="<c:url value="/images/product-images/grey-sofa.jpg" />" />
+						<c:url value="/products/detail" var="productDetailsURL">
+							<c:param name="id" value="${product.id}" />
+						</c:url>
+						<a class="product-image" href="${productDetailsURL}"> <img
+							src="<c:url value="/images/product-images/${product.imageName}" />" />
 						</a>
 						<div class="details">
 							<p class="name">${product.name}</p>
