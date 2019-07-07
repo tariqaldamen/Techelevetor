@@ -162,7 +162,7 @@ public class CityController {
 		 * a GET and keep the form from submitting again on a refresh
 		 */
 		System.out.println("POST - with ModelMap");
-		return "redirect:/";  
+		return "redirect:/";  // btraj3ak 3la elhome 3shan eda 3mel refresh ma erja3 ermal add l2nh bde3 el data ele d5lha el user bs t3mel hek
 	}
 	
 }

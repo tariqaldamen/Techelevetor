@@ -10,12 +10,12 @@
 <c:url var="addCityWithPostAndRedirectUrl" value="/addCityWithPostAndRedirect" />
 <c:url var="addCityWithPostWithModelMap" value="/addCityWithPostWithModelMap" />
 
-<!--  form action="${addCityUrl}" method="GET"> -->
-<!-- form action="${addCityUrl}" method="POST"> -->
+<!--form action="${addCityUrl}" method="GET"> -->
+<form action="${addCityUrl}" method="POST"> 
 <!-- form action="${addCityWithBindingUrl}" method="POST" -->
-<!-- form action="${addCityWithRequestParamsUrl}" method="POST"-->
+<!-- form action="${addCityWithRequestParamsUrl}" method="POST"--> <!-- 3'er elkwment fenhm 3shan t3'er wen erw7 bel controller -->
 <!-- form action="${addCityWithPostAndRedirectUrl}" method="POST"-->
-<form action="${addCityWithPostWithModelMap}" method="POST">
+<!--form action="${addCityWithPostWithModelMap}" method="POST"-->
 	<label for="name">Name:</label>
 	<input type="text" name="name" /><br />
 	<label for="district">District:</label>

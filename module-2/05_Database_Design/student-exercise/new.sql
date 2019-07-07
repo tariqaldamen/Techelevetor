@@ -24,3 +24,6 @@ SELECT first_name, last_name, email, activebool
 FROM customer
 WHERE last_name ILIKE'%SON%' OR first_name ILIKE '%SON%'
 ORDER BY last_name 
+
+
+DELETE FROM reviews WHERE username = 'WEFF'
